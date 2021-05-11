@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/codebuster22/es6-tut/issues"
   },
-  "homepage": "https://github.com/codebuster22/es6-tut#readme"
+  "homepage": "https://github.com/codebuster22/es6-tut#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
