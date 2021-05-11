@@ -56,7 +56,7 @@ const userData = {
     deleteUser: () => {
         const index = input("Enter user index to delete:- ")
         print("Deleting user:- ", userData[index]);
-        delete userData.index;
+        delete userData[index];
         userData.length--;
     },
     updateUserCity: () => {
@@ -71,10 +71,12 @@ const userData = {
     },
     getUserCondingLang: () => {
         const index = input("Enter user index:- ");
-        const {skills: {codingLang}} = userData[index];
+        const { skills: { codingLang }} = userData[index];
         print(codingLang[0]);
     },
 };
+
+const wait = () => input("Press Enter to move ahead.");
 
 const main = () => {
     let running = true;
@@ -93,31 +95,31 @@ const main = () => {
         switch(option){
             case '1':
                 userData.addUser();
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '2':
                 userData.deleteUser();
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '3':
                 userData.updateUserCity();
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '4':
                 userData.getUser();
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '5':
                 userData.getUserCondingLang();
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '6':
                 print(userData.length);
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '7':
                 print(userData);
-                input("Press Enter to move ahead.")
+                wait();
                 break;
             case '8':
                 running = false;
