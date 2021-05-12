@@ -12,6 +12,8 @@ const handleClick = () => {
     const li = document.createElement('li');
     li.innerText = task;
     todoList.appendChild(li);
+    // todoList.remove();
+    // todoList.removeChild( todoList.childNodes[] );
 }
 
 input.addEventListener("change", handleInput);
